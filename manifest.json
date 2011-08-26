@@ -1,0 +1,19 @@
+{
+	"name": "FileWriter",
+	"description": "Edit and view local files with this text editor geared towards web development.",
+	"version": "1.0",
+	"app": {
+		"launch": {
+			"local_path": "index.html"
+		}
+	},
+	"icons": {
+		"16": "images/16.png",
+		"48": "images/48.png",
+		"128": "images/128.png"
+	},
+	"permissions": [
+		"notifications",
+		"unlimitedStorage"
+	]
+}

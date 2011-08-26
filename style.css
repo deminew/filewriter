@@ -1,0 +1,112 @@
+html, body, div, section, article, input, nav, ul, li, button, textarea, h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0;
+}
+body, button {
+	font-family: "Verdana", "Arial", sans-serif;
+	font-size: 14px;
+}
+a {
+	color: black;
+	text-decoration: none;
+}
+button, .launch {
+	padding: 5px;
+	border: 0;
+	border-radius: 5px;
+	color: white;
+	background: #666;
+	cursor: pointer;
+}
+button:hover, .launch:hover {
+	background: orange;
+}
+button:active, .launch:active {
+	background: #E69500;
+}
+
+#sidebar, #editor, #status {
+	position: fixed;
+}
+#sidebar {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 300px;
+	min-width: 200px;
+	color: white;
+	background: #272822;
+	padding-top: 10px;
+	overflow-y: auto;
+	-webkit-box-shadow: 0 0 50px #272822;
+	z-index: 2;
+}
+#commands {
+	padding: 5px 10px;
+}
+#commands button {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+}
+#sidebar>ul {
+	margin-top: 25px;
+	list-style: none;
+}
+#sidebar span {
+	clear: both;
+	display: block;
+	height: 25px;
+	padding: 10px 5px 5px 40px;
+}
+/* 	Adding the 40px rule specifically to .folder span doesn't work, so we have to
+	apply it to all spans and then renege on it specifically in upper spans. */
+#sidebar>ul>li>span {		
+	padding: 10px 5px 5px 10px;
+}
+#sidebar span:hover {
+	cursor: pointer;
+	background: #00b8f5;
+}
+.active {
+	color: white;
+	background: #008ab8;
+}
+.launch {
+	display: block;
+	float: right;
+	margin-top: -4px;
+	color: white;
+}
+.folder {
+	margin-top: 30px;
+	padding-left: 10px;
+}
+.folder ul {
+	margin-top: 4px;
+}
+.folder li {
+	margin-left: -10px;
+}
+
+
+
+#editor {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 300px;
+	overflow-x: hidden;
+	font-family: Monaco, "Menlo", "Courier New", monospace;
+	font-size: 14px;
+}
+#status {
+	right: 0;
+	bottom: 0;
+	left: 300px;
+	height: 20px;
+	color: #666;
+	text-align: center;
+	font-size: 10px;
+}
